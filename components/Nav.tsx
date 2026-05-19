@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -24,8 +25,13 @@ export function Nav() {
       >
         {/* Brand */}
         <a href="#hero" className="flex items-center gap-[10px] no-underline shrink-0 min-w-0">
-          <div className="w-[34px] h-[34px] rounded-[10px] bg-navy flex items-center justify-center shrink-0">
-            <span className="font-serif text-[0.95rem] font-semibold text-gold">U</span>
+          <div className="w-[34px] h-[34px] relative shrink-0">
+            <Image
+              src="/udmh-logo.png"
+              alt="Umeano Dental Logo"
+              fill
+              className="object-contain"
+            />
           </div>
           <div className="min-w-0 overflow-hidden">
             <strong className="block text-[0.88rem] font-medium text-navy tracking-[0.01em] whitespace-nowrap overflow-hidden text-ellipsis">
