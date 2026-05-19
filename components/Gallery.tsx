@@ -14,7 +14,7 @@ const items = [
   { key: "g2", label: "Treatment Room", caption: "Treatment Room", span: "col-span-4 max-md:col-span-1" },
   { key: "g3", label: "X-Ray Suite", caption: "Digital X-Ray Suite", span: "col-span-3 max-md:col-span-1" },
   { key: "g4", label: "Surgical Theatre", caption: "Surgical Suite", span: "col-span-3 max-md:col-span-1" },
-  { key: "g5", label: "Waiting Lounge", caption: "Patient Lounge", span: "col-span-4 max-md:col-span-1" },
+  { key: "g5", label: "Waiting Lounge", caption: "Patient Lounge", span: "col-span-4 max-md:col-span-2" },
 ];
 
 export function Gallery() {

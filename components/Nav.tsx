@@ -37,7 +37,7 @@ export function Nav() {
             <strong className="block text-[0.88rem] font-medium text-navy tracking-[0.01em] whitespace-nowrap overflow-hidden text-ellipsis">
               Umeano Dental
             </strong>
-            <small className="text-[0.6rem] tracking-[0.1em] uppercase text-muted whitespace-nowrap hidden md:block">
+            <small className="text-[0.6rem] tracking-[0.1em] uppercase text-muted whitespace-nowrap">
               &amp; Maxillofacial Hospital
             </small>
           </div>
@@ -66,7 +66,7 @@ export function Nav() {
         {/* CTA */}
         <a
           href="#appointment"
-          className="bg-navy text-white px-[18px] py-[9px] rounded-full text-[0.8rem] font-medium no-underline transition-all duration-200 whitespace-nowrap shrink-0 hover:bg-navy-mid hover:-translate-y-px"
+          className="bg-navy text-white px-[18px] py-[9px] hidden md:block rounded-full text-[0.8rem] font-medium no-underline transition-all duration-200 whitespace-nowrap shrink-0 hover:bg-navy-mid hover:-translate-y-px"
         >
           Book Appointment
         </a>

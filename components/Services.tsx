@@ -39,7 +39,7 @@ const Circle = () => (
 
 /* Shared tile class helpers */
 const tileBase =
-  "relative overflow-hidden cursor-pointer flex flex-col justify-between rounded-[20px] px-7 py-[30px] " +
+  "relative overflow-hidden cursor-pointer flex flex-col justify-between rounded-[20px] px-7 py-[30px] max-sm:px-5 max-sm:py-6 max-sm:gap-4 " +
   "transition-all duration-300 " +
   /* accent bar pseudo-element */
   "before:content-[''] before:absolute before:top-0 before:left-0 before:w-[3px] before:h-full before:bg-gold " +
@@ -48,15 +48,15 @@ const tileBase =
 
 const tileDefault =
   tileBase +
-  " bg-white border border-line hover:shadow-[0_18px_56px_rgba(10,22,40,0.09)] hover:border-gold/35 hover:-translate-y-[3px]";
+  " bg-white border border-line hover:shadow-[0_18px_56px_rgba(10,22,40,0.09)] hover:border-gold/35 hover:-translate-y-[3px] max-sm:min-h-0";
 
 const tileFeatured =
   tileBase +
-  " col-span-2 bg-navy border border-transparent hover:shadow-[0_18px_56px_rgba(10,22,40,0.18)] hover:-translate-y-[3px]";
+  " col-span-2 bg-navy border border-transparent hover:shadow-[0_18px_56px_rgba(10,22,40,0.18)] hover:-translate-y-[3px] max-sm:col-span-1 max-sm:min-h-0";
 
 const tileAccent =
   tileBase +
-  " col-span-2 bg-gold-pale border border-gold/30 hover:shadow-[0_18px_56px_rgba(10,22,40,0.09)] hover:-translate-y-[3px]";
+  " col-span-2 bg-gold-pale border border-gold/30 hover:shadow-[0_18px_56px_rgba(10,22,40,0.09)] hover:-translate-y-[3px] max-sm:col-span-1 max-sm:min-h-0";
 
 const iconWrapDefault = "w-[42px] h-[42px] rounded-[11px] bg-navy flex items-center justify-center mb-4 shrink-0";
 const iconWrapFeatured = "w-[42px] h-[42px] rounded-[11px] bg-[rgba(200,169,110,0.18)] flex items-center justify-center mb-4 shrink-0";
@@ -102,7 +102,7 @@ export function Services() {
       </div>
 
       {/* Bento grid */}
-      <div className="grid grid-cols-3 gap-[14px] max-[1100px]:grid-cols-2 max-sm:grid-cols-1">
+      <div className="grid md:grid-cols-3 gap-[14px] max-[1100px]:grid-cols-2 max-sm:grid-cols-1 max-sm:auto-rows-auto">
         {/* 01 — Featured (spans 2) */}
         <Reveal className={tileFeatured}>
           <div>
@@ -118,7 +118,7 @@ export function Services() {
         </Reveal>
 
         {/* 02 — General Dentistry (tall) */}
-        <Reveal delay={1} className={`${tileDefault} min-h-[240px]`}>
+        <Reveal delay={1} className={`${tileDefault} min-h-[240px] max-sm:min-h-0`}>
           <div>
             <div className={numDefault}>02</div>
             <div className={iconWrapDefault}><ToothPin /></div>
