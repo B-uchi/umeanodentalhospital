@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 
 const ImagePh = ({ label }: { label: string }) => (
@@ -87,6 +88,12 @@ export function About() {
               </div>
             ))}
           </div>
+          <Link
+            href="/about"
+            className="inline-flex items-center gap-[6px] mt-8 text-[0.82rem] font-medium tracking-[0.08em] uppercase text-navy no-underline px-6 py-[10px] rounded-full border-[1.5px] border-navy transition-all duration-200 hover:bg-navy hover:text-white"
+          >
+            Our Full Story →
+          </Link>
         </Reveal>
       </div>
     </section>

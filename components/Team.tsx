@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 
 const PersonPh = ({ label }: { label: string }) => (
@@ -55,7 +56,16 @@ export function Team() {
         </p>
       </Reveal>
 
-      <div className="grid grid-cols-3 gap-6 mt-[52px] max-md:grid-cols-2 max-sm:grid-cols-1">
+      <Reveal delay={3}>
+        <Link
+          href="/team"
+          className="inline-flex items-center gap-[6px] mt-2 mb-[52px] text-[0.82rem] font-medium tracking-[0.08em] uppercase text-navy no-underline px-6 py-[10px] rounded-full border-[1.5px] border-navy transition-all duration-200 hover:bg-navy hover:text-white"
+        >
+          Meet the Full Team →
+        </Link>
+      </Reveal>
+
+      <div className="grid grid-cols-3 gap-6 mt-0 max-md:grid-cols-2 max-sm:grid-cols-1">
         {members.map((m) => (
           <Reveal key={m.name} delay={m.delay}>
             <div className="bg-white rounded-[28px] overflow-hidden border border-line transition-all duration-300 hover:-translate-y-[5px] hover:shadow-[0_20px_60px_rgba(10,22,40,0.1)] hover:border-transparent">

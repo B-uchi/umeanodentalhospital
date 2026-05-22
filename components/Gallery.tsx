@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 
 const ImgPh = ({ label }: { label: string }) => (
@@ -37,7 +38,24 @@ export function Gallery() {
       </Reveal>
 
       <Reveal delay={3}>
-        <div className="grid grid-cols-12 grid-rows-[260px_260px] gap-[10px] mt-11 rounded-[28px] overflow-hidden max-md:grid-cols-2 max-md:grid-rows-none max-md:auto-rows-[200px]">
+        <div className="flex items-center gap-4 mt-2 mb-11 flex-wrap">
+          <Link
+            href="/gallery/photos"
+            className="text-[0.82rem] font-medium tracking-[0.08em] uppercase text-white no-underline px-6 py-[10px] rounded-full border-[1.5px] border-white/30 transition-all duration-200 hover:border-white hover:bg-white/10"
+          >
+            Photo Booth →
+          </Link>
+          <Link
+            href="/gallery/before-after"
+            className="text-[0.82rem] font-medium tracking-[0.08em] uppercase text-gold no-underline px-6 py-[10px] rounded-full border-[1.5px] border-gold/40 transition-all duration-200 hover:border-gold hover:bg-gold/10"
+          >
+            Before &amp; After →
+          </Link>
+        </div>
+      </Reveal>
+
+      <Reveal delay={4}>
+        <div className="grid grid-cols-12 grid-rows-[260px_260px] gap-[10px] rounded-[28px] overflow-hidden max-md:grid-cols-2 max-md:grid-rows-none max-md:auto-rows-[200px]">
           {items.map((item) => (
             <div
               key={item.key}
