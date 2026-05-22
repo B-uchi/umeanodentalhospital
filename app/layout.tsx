@@ -53,6 +53,12 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: `${siteName} preview image`,
+      },
+      {
         url: "/udmh-logo.png",
         width: 697,
         height: 667,
@@ -64,7 +70,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteName,
     description: siteDescription,
-    images: ["/udmh-logo.png"],
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
